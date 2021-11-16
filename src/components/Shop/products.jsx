@@ -10,7 +10,7 @@ import {
 } from "../styled/main";
 import Snackbar from "./snackbar";
 
-const Products = () => {
+const Products = (props) => {
   const [show, setShow] = useState(false);
   function snackbarlike() {
     setShow(true);
@@ -26,8 +26,9 @@ const Products = () => {
       <Card>
         <CardImg src="https://fakeimg.pl/300x200/"></CardImg>
         <CardBody>
-          <CardTitle>商品名</CardTitle>
-          <CardText>商品說明.........</CardText>
+          <CardTitle>ProductName</CardTitle>
+          {/* {props.name} */}
+          <CardText>ProductDesc</CardText>
           <CardIconList>
             <CardIcon>
               <svg

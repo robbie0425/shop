@@ -90,3 +90,12 @@ export const NavIcon = styled.div`
     stroke: white;
   }
 `;
+
+export const CartCount = styled.div`
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  z-index: 100;
+  top: 18px;
+  left: 20px;
+`;

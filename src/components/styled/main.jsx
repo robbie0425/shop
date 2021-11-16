@@ -3,9 +3,14 @@ import NewImg from "../../pic/new.png";
 import LipstickImg from "../../pic/lipstick.png";
 import PerfumeImg from "../../pic/perfume.jpeg";
 import MaskImg from "../../pic/mask.jpeg";
+import CartImg from "../../pic/cart2.jpeg";
 
 export const Main = styled.div`
   background: #ffeeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const New = styled.div`
@@ -52,6 +57,18 @@ export const Masks = styled.div`
   display: flex;
   align-items: center;
   opacity: 0.5;
+`;
+
+export const Carts = styled.div`
+  background: url(${CartImg});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
 `;
 
 export const NewTitle = styled.div`
@@ -155,4 +172,182 @@ export const SnackbarText = styled.div`
   color: black;
   height: 30px;
   text-align: center;
+`;
+
+export const CartContainer = styled.div`
+  width: 70%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px #90caf9;
+  margin: 50px;
+`;
+
+export const CartHeader = styled.div`
+  margin: auto;
+  margin-top: 5%;
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const CartTitle = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+`;
+
+export const RemoveAll = styled.div`
+  font-size: 15px;
+  font-weight: 600;
+  color: red;
+  cursor: pointer;
+  border-bottom: 1px solid red;
+`;
+
+export const CartItem = styled.div`
+  margin: auto;
+  margin-top: 2%;
+  width: 90%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const ProductImg = styled.img``;
+
+export const CartAbout = styled.div`
+  margin: auto;
+  width: 20%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const ProductName = styled.div`
+  line-height: 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: black;
+`;
+
+export const ProductInfo = styled.div`
+  line-height: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: gray;
+`;
+
+export const CartCounter = styled.div`
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Plus = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d3d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+`;
+
+export const Count = styled.div`
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+`;
+
+export const Minus = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d3d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+`;
+
+export const CartPrice = styled.div`
+  width: 20%;
+  text-align: right;
+`;
+
+export const Amount = styled.div`
+  font-size: 20px;
+  font-weight: 800;
+  color: gray;
+`;
+
+export const Total = styled.div`
+  font-size: 26px;
+  font-weight: 800;
+  color: black;
+`;
+
+export const Remove = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+  cursor: pointer;
+`;
+
+export const CartLine = styled.div`
+  width: 30%;
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+`;
+
+export const CartTotal = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const CartItemCount = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  color: #909090;
+  line-height: 10px;
+`;
+
+export const CartTotalPrice = styled.div`
+  font-size: 36px;
+  font-weight: 900;
+  color: black;
+`;
+
+export const Checkout = styled.button`
+  margin-top: 5px;
+  margin-right: 5%;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: linear-gradient(to bottom right, #bed9fc, #90caf9);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
 `;

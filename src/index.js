@@ -9,7 +9,7 @@ import Shop from "./components/Shop";
 import Lipstick from "./components/Shop/lipstick";
 import Perfume from "./components/Shop/perfume";
 import Mask from "./components/Shop/mask";
-import Order from "./components/Order";
+import Cart from "./components/Shop/cart";
 
 
 ReactDOM.render(
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Route path="/lipstick" component={Lipstick}></Route>
         <Route path="/perfume" component={Perfume}></Route>
         <Route path="/mask" component={Mask}></Route>
-        <Route path="/order" component={Order}></Route>
+        <Route path="/cart" component={Cart}></Route>
       </Switch>
     </Router>
   </React.StrictMode>,

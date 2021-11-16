@@ -22,7 +22,33 @@ import {
   SearchProduct,
   SearchClose,
 } from "../styled/search";
-import { Main, New, NewTitle, CardList } from "../styled/main";
+import {
+  Main,
+  Carts,
+  NewTitle,
+  CartContainer,
+  CartHeader,
+  CartTitle,
+  RemoveAll,
+  CartItem,
+  ProductImg,
+  CartAbout,
+  ProductName,
+  ProductInfo,
+  CartCounter,
+  Plus,
+  Count,
+  Minus,
+  CartPrice,
+  Amount,
+  Total,
+  Remove,
+  CartTotal,
+  CartLine,
+  CartItemCount,
+  CartTotalPrice,
+  Checkout,
+} from "../styled/main";
 import {
   Footer,
   FooterBottom,
@@ -46,7 +72,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Shop = () => {
+const Cart = () => {
   window.scrollTo({ top: 0 });
   //const location = useLocation();
   const [isopen, setIsopen] = useState(false);
@@ -73,19 +99,19 @@ const Shop = () => {
     //alert(document.getElementById("search").classList.contains("active"));
   }
 
-  // const [customers, setCustomers] = useState([]);
+  const [customers, setCustomers] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const result = await axios.get("/customer");
+  useEffect(() => {
+    async function fetchData() {
+      const result = await axios.get("/customer");
 
-  //     //console.log(result);
+      //console.log(result);
 
-  //     setCustomers(result.data);
-  //   }
+      setCustomers(result.data);
+    }
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -104,17 +130,15 @@ const Shop = () => {
                 />
               </svg>
             </NavIcon>
-            <StyledLink to="/cart">
-              <NavIcon>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    fill="#C48B9F"
-                    d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z"
-                  />
-                </svg>
-                <CartCount>0</CartCount>
-              </NavIcon>
-            </StyledLink>
+            <NavIcon>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="#C48B9F"
+                  d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z"
+                />
+              </svg>
+              <CartCount>0</CartCount>
+            </NavIcon>
             <NavIcon>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -169,17 +193,15 @@ const Shop = () => {
                 />
               </svg>
             </NavIcon>
-            <StyledLink to="/cart">
-              <NavIcon>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    fill="#C48B9F"
-                    d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z"
-                  />
-                </svg>
-                <CartCount>0</CartCount>
-              </NavIcon>
-            </StyledLink>
+            <NavIcon>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="#C48B9F"
+                  d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z"
+                />
+              </svg>
+              <CartCount>0</CartCount>
+            </NavIcon>
             <NavIcon>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -217,21 +239,39 @@ const Shop = () => {
           <SearchProduct></SearchProduct>
         </Search>
         <Main>
-          <New>
-            <NewTitle>NEW</NewTitle>
-          </New>
-          <CardList>
-            {/* {customers.map((customer) => ( */}
-            <Products
-            // name={customer.customerName}
-            // address={customer.customerEmail}
-            ></Products>
-            <Products></Products>
-            <Products></Products>
-            <Products></Products>
-            <Products></Products>
-            {/* ))} */}
-          </CardList>
+          <Carts>
+            <NewTitle>Cart</NewTitle>
+          </Carts>
+          <CartContainer>
+            <CartHeader>
+              <CartTitle>Shopping Cart</CartTitle>
+              <RemoveAll>Remove All</RemoveAll>
+            </CartHeader>
+            <CartItem>
+              <ProductImg src="https://fakeimg.pl/200x150/"></ProductImg>
+              <CartAbout>
+                <ProductName>Apple</ProductName>
+                <ProductInfo>a fruit...</ProductInfo>
+              </CartAbout>
+              <CartCounter>
+                <Plus>+</Plus>
+                <Count>1</Count>
+                <Minus>-</Minus>
+              </CartCounter>
+              <CartPrice>
+                <Amount>$10 * 1</Amount>
+                <Total>= $10</Total>
+                <Remove>Remove</Remove>
+              </CartPrice>
+            </CartItem>
+            <CartLine>
+              <CartTotal>
+                <CartItemCount>1 items</CartItemCount>
+                <CartTotalPrice>$10</CartTotalPrice>
+              </CartTotal>
+              <Checkout>Checkout</Checkout>
+            </CartLine>
+          </CartContainer>
         </Main>
         <Footer>
           <FooterList>
@@ -322,4 +362,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Cart;
