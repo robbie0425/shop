@@ -248,7 +248,7 @@ const Cart = () => {
               <RemoveAll>Remove All</RemoveAll>
             </CartHeader>
             <CartItem>
-              <ProductImg src="https://fakeimg.pl/200x150/"></ProductImg>
+              <ProductImg src="https://fakeimg.pl/250x200/"></ProductImg>
               <CartAbout>
                 <ProductName>Apple</ProductName>
                 <ProductInfo>a fruit...</ProductInfo>

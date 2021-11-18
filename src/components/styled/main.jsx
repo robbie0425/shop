@@ -92,7 +92,7 @@ export const CardList = styled.div`
 `;
 
 export const Card = styled.div`
-  margin-bottom: 30px;
+  margin: 30px;
   height: 300px;
   width: 300px;
 `;
@@ -211,19 +211,20 @@ export const CartItem = styled.div`
   margin: auto;
   margin-top: 2%;
   width: 90%;
-  height: 150px;
+  height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 `;
 
-export const ProductImg = styled.img``;
+export const ProductImg = styled.img`
+  width: auto;
+`;
 
 export const CartAbout = styled.div`
-  margin: auto;
-  width: 20%;
-  height: 30%;
+  width: 200px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,21 +232,21 @@ export const CartAbout = styled.div`
 `;
 
 export const ProductName = styled.div`
-  line-height: 10px;
+  //line-height: 10px;
   font-size: 32px;
   font-weight: 800;
   color: black;
 `;
 
 export const ProductInfo = styled.div`
-  line-height: 10px;
+  //line-height: 10px;
   font-size: 18px;
   font-weight: 600;
   color: gray;
 `;
 
 export const CartCounter = styled.div`
-  width: 15%;
+  width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,7 +285,7 @@ export const Minus = styled.div`
 `;
 
 export const CartPrice = styled.div`
-  width: 20%;
+  width: 100px;
   text-align: right;
 `;
 
@@ -308,10 +309,9 @@ export const Remove = styled.div`
 `;
 
 export const CartLine = styled.div`
-  width: 30%;
+  width: 50%;
   float: right;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  margin: 5%;
   border-top: 1px solid gray;
   display: flex;
   justify-content: flex-end;
