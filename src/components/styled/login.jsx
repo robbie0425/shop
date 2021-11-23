@@ -24,6 +24,10 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media (max-width: 428px) {
+    right: 10vw;
+  }
 `;
 
 export const Title = styled.div`
