@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"; //useLocation
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import Products from "./products";
 import logo from "../../pic/logo.png";
 import ScrollToTop from "../js/scrolltotop";
 import {
@@ -58,7 +57,6 @@ import {
   FooterIcon,
   FooterIconList,
 } from "../styled/footer";
-import axios from "axios";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -98,20 +96,6 @@ const Cart = () => {
     searchID.classList.toggle("active");
     //alert(document.getElementById("search").classList.contains("active"));
   }
-
-  const [customers, setCustomers] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const result = await axios.get("/customer");
-
-      //console.log(result);
-
-      setCustomers(result.data);
-    }
-
-    fetchData();
-  }, []);
 
   return (
     <>

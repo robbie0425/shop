@@ -93,12 +93,12 @@ export const CardList = styled.div`
 
 export const Card = styled.div`
   margin: 30px;
-  height: 300px;
-  width: 300px;
+  //height: 300px;
+  //width: 300px;
 `;
 
 export const CardImg = styled.img`
-  height: 200px;
+  height: 300px;
   width: 300px;
 `;
 
@@ -339,7 +339,7 @@ export const CartTotalPrice = styled.div`
 `;
 
 export const Checkout = styled.button`
-  margin-top: 5px;
+  margin-top: 5%;
   margin-right: 5%;
   width: 100%;
   height: 40px;
@@ -350,4 +350,52 @@ export const Checkout = styled.button`
   font-size: 16px;
   font-weight: 600;
   color: black;
+`;
+
+export const SurplusText = styled.div`
+  font-size: 20px;
+  font-weight: 900;
+  color: gray;
+`;
+
+export const ProductSurplus = styled.div`
+  font-size: 25px;
+  font-weight: 900;
+  color: black;
+`;
+
+export const WishRemove = styled.svg`
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+
+  &:hover {
+    stroke: white;
+  }
+`;
+
+export const ChangeInput = styled.input`
+  height: 30px;
+  width: 100%;
+  border-radius: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #90caf9;
+`;
+
+export const ChangeButton = styled.button`
+  height: 50px;
+  width: 70%;
+  border-radius: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #90caf9;
+
+  &:hover {
+    box-shadow: 0 0 15px green;
+  }
 `;

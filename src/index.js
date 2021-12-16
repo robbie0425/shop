@@ -10,7 +10,8 @@ import Lipstick from "./components/Shop/lipstick";
 import Perfume from "./components/Shop/perfume";
 import Mask from "./components/Shop/mask";
 import Cart from "./components/Shop/cart";
-
+import Wishlist from "./components/Shop/wishlist";
+import Account from "./components/Shop/account";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,8 @@ ReactDOM.render(
         <Route path="/perfume" component={Perfume}></Route>
         <Route path="/mask" component={Mask}></Route>
         <Route path="/cart" component={Cart}></Route>
+        <Route path="/wishlist" component={Wishlist}></Route>
+        <Route path="/account" component={Account}></Route>
       </Switch>
     </Router>
   </React.StrictMode>,

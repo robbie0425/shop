@@ -24,11 +24,11 @@ const Products = (props) => {
     <>
       {show && <Snackbar />}
       <Card>
-        <CardImg src="https://fakeimg.pl/300x200/"></CardImg>
+        <CardImg src="https://fakeimg.pl/300x300/"></CardImg>
         <CardBody>
           <CardTitle>ProductName</CardTitle>
           {/* {props.name} */}
-          <CardText>ProductDesc</CardText>
+          <CardText>ProductPrice</CardText>
           <CardIconList>
             <CardIcon>
               <svg

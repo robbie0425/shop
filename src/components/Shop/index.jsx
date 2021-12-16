@@ -32,7 +32,6 @@ import {
   FooterIcon,
   FooterIconList,
 } from "../styled/footer";
-import axios from "axios";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -73,20 +72,6 @@ const Shop = () => {
     //alert(document.getElementById("search").classList.contains("active"));
   }
 
-  // const [customers, setCustomers] = useState([]);
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const result = await axios.get("/customer");
-
-  //     //console.log(result);
-
-  //     setCustomers(result.data);
-  //   }
-
-  //   fetchData();
-  // }, []);
-
   return (
     <>
       {/* {location.pathname === "/" && ( */}
@@ -115,26 +100,30 @@ const Shop = () => {
                 <CartCount>0</CartCount>
               </NavIcon>
             </StyledLink>
-            <NavIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  fill="#C48B9F"
-                  d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"
-                />
-              </svg>
-            </NavIcon>
-            <NavIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="Layer 1"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#C48B9F"
-                  d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"
-                />
-              </svg>
-            </NavIcon>
+            <StyledLink to="/wishlist">
+              <NavIcon>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    fill="#C48B9F"
+                    d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"
+                  />
+                </svg>
+              </NavIcon>
+            </StyledLink>
+            <StyledLink to="/account">
+              <NavIcon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#C48B9F"
+                    d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"
+                  />
+                </svg>
+              </NavIcon>
+            </StyledLink>
             <NavIcon onClick={openNav}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -180,26 +169,30 @@ const Shop = () => {
                 <CartCount>0</CartCount>
               </NavIcon>
             </StyledLink>
-            <NavIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  fill="#C48B9F"
-                  d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"
-                />
-              </svg>
-            </NavIcon>
-            <NavIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="Layer 1"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#C48B9F"
-                  d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"
-                />
-              </svg>
-            </NavIcon>
+            <StyledLink to="/wishlist">
+              <NavIcon>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    fill="#C48B9F"
+                    d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"
+                  />
+                </svg>
+              </NavIcon>
+            </StyledLink>
+            <StyledLink to="/account">
+              <NavIcon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#C48B9F"
+                    d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"
+                  />
+                </svg>
+              </NavIcon>
+            </StyledLink>
           </NavRight>
         </Navbar>
         <Search id="search">
@@ -221,16 +214,11 @@ const Shop = () => {
             <NewTitle>NEW</NewTitle>
           </New>
           <CardList>
-            {/* {customers.map((customer) => ( */}
-            <Products
-            // name={customer.customerName}
-            // address={customer.customerEmail}
-            ></Products>
             <Products></Products>
             <Products></Products>
             <Products></Products>
             <Products></Products>
-            {/* ))} */}
+            <Products></Products>
           </CardList>
         </Main>
         <Footer>
